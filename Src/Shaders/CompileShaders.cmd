@@ -187,6 +187,9 @@ call :CompileShader%1 SpriteEffect ps SpritePixelShader
 call :CompileShader%1 SpriteEffect vs SpriteVertexShaderHeap
 call :CompileShader%1 SpriteEffect ps SpritePixelShaderHeap
 
+call :CompileShader%1 SkyboxEffect vs SkyboxVS
+call :CompileShader%1 SkyboxEffect ps SkyboxPS
+
 call :CompileShader%1 PostProcess vs VSQuad
 call :CompileShader%1 PostProcess vs VSQuadNoCB
 call :CompileShader%1 PostProcess vs VSQuadDual
@@ -237,27 +240,13 @@ endlocal
 exit /b
 
 :CompileShader
-set fxc=%PCFXC% %1.fx %FXCOPTS% /T%2_5_1 %PCOPTS% /E%3 /FhCompiled\%1_%3.inc /FdCompiled\%1_%3.pdb /Vn%1_%3
-echo.
-echo %fxc%
-%fxc% || set error=1
-exit /b
-
-:CompileComputeShader
-set fxc=%PCFXC% %1.hlsl %FXCOPTS% /Tcs_5_1 %PCOPTS% /E%2 /FhCompiled\%1_%2.inc /FdCompiled\%1_%2.pdb /Vn%1_%2
-echo.
-echo %fxc%
-%fxc% || set error=1
-exit /b
-
-:CompileShaderdxil
 set dxc=%PCDXC% %1.fx %FXCOPTS% /T%2_6_0 /E%3 /FhCompiled\%1_%3.inc /FdCompiled\%1_%3.pdb /Vn%1_%3
 echo.
 echo %dxc%
 %dxc% || set error=1
 exit /b
 
-:CompileComputeShaderdxil
+:CompileComputeShader
 set dxc=%PCDXC% %1.hlsl %FXCOPTS% /Tcs_6_0 /E%2 /FhCompiled\%1_%2.inc /FdCompiled\%1_%2.pdb /Vn%1_%2
 echo.
 echo %dxc%

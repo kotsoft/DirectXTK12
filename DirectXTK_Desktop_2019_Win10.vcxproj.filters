@@ -159,6 +159,12 @@
     <ClInclude Include="Inc\BufferHelpers.h">
       <Filter>Inc</Filter>
     </ClInclude>
+    <ClInclude Include="Inc\Skybox.h">
+      <Filter>Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\SkyboxEffect.h">
+      <Filter>Inc</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Src\CommonStates.cpp">
@@ -309,6 +315,9 @@
       <Filter>Audio</Filter>
     </ClCompile>
     <ClCompile Include="Src\BufferHelpers.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\SkyboxEffect.cpp">
       <Filter>Src</Filter>
     </ClCompile>
   </ItemGroup>
@@ -1181,5 +1190,17 @@
       <Filter>Src\Shaders\Symbols</Filter>
     </None>
     <None Include="README.md" />
+    <None Include="Src\Shaders\SkyboxEffect_Common.hlsli">
+      <Filter>Src\Shaders\Shared</Filter>
+    </None>
+    <None Include="Src\Shaders\SkyboxEffect.fx">
+      <Filter>Src\Shaders</Filter>
+    </None>
+    <None Include="Src\Shaders\Compiled\SkyboxEffect_SkyboxPS.inc">
+      <Filter>Src\Shaders\Compiled</Filter>
+    </None>
+    <None Include="Src\Shaders\Compiled\SkyboxEffect_SkyboxVS.inc">
+      <Filter>Src\Shaders\Compiled</Filter>
+    </None>
   </ItemGroup>
 </Project>

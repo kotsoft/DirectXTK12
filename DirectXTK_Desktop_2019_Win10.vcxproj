@@ -50,6 +50,8 @@
     <ClInclude Include="Inc\SimpleMath.h" />
     <ClInclude Include="Inc\SimpleMath.inl" />
     <ClInclude Include="Inc\ScreenGrab.h" />
+    <ClInclude Include="Inc\Skybox.h" />
+    <ClInclude Include="Inc\SkyboxEffect.h" />
     <ClInclude Include="Inc\SpriteBatch.h" />
     <ClInclude Include="Inc\PrimitiveBatch.h" />
     <ClInclude Include="Inc\SpriteFont.h" />
@@ -123,6 +125,7 @@
     <ClCompile Include="Src\ScreenGrab.cpp" />
     <ClCompile Include="Src\SimpleMath.cpp" />
     <ClCompile Include="Src\SkinnedEffect.cpp" />
+    <ClCompile Include="Src\SkyboxEffect.cpp" />
     <ClCompile Include="Src\SpriteBatch.cpp" />
     <ClCompile Include="Src\PrimitiveBatch.cpp" />
     <ClCompile Include="Src\SpriteFont.cpp" />
@@ -373,6 +376,8 @@
     <None Include="Src\Shaders\Compiled\SkinnedEffect_VSSkinnedVertexLightingTwoBones.pdb" />
     <None Include="Src\Shaders\Compiled\SkinnedEffect_VSSkinnedVertexLightingTwoBonesBn.inc" />
     <None Include="Src\Shaders\Compiled\SkinnedEffect_VSSkinnedVertexLightingTwoBonesBn.pdb" />
+    <None Include="Src\Shaders\Compiled\SkyboxEffect_SkyboxPS.inc" />
+    <None Include="Src\Shaders\Compiled\SkyboxEffect_SkyboxVS.inc" />
     <None Include="Src\Shaders\Compiled\SpriteEffect_SpritePixelShader.inc" />
     <None Include="Src\Shaders\Compiled\SpriteEffect_SpritePixelShader.pdb" />
     <None Include="Src\Shaders\Compiled\SpriteEffect_SpritePixelShaderHeap.inc" />
@@ -406,6 +411,7 @@
     <None Include="Src\Shaders\PBRCommon.fxh" />
     <None Include="Src\Shaders\PixelPacking_Velocity.hlsli" />
     <None Include="Src\Shaders\RootSig.fxh" />
+    <None Include="Src\Shaders\SkyboxEffect_Common.hlsli" />
     <None Include="Src\Shaders\SpriteEffect.fx" />
     <None Include="Src\Shaders\Structures.fxh" />
     <None Include="Src\Shaders\Utilities.fxh" />
@@ -455,6 +461,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Src\Shaders\DebugEffect.fx">
+      <FileType>Document</FileType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Src\Shaders\SkyboxEffect.fx">
       <FileType>Document</FileType>
     </None>
   </ItemGroup>
