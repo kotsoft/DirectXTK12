@@ -181,6 +181,9 @@ call :CompileShader%1 DebugEffect ps PSRGBNormals
 call :CompileShader%1 DebugEffect ps PSRGBTangents
 call :CompileShader%1 DebugEffect ps PSRGBBiTangents
 
+call :CompileShader%1 SkyboxEffect vs SkyboxVS
+call :CompileShader%1 SkyboxEffect ps SkyboxPS
+
 call :CompileShader%1 SpriteEffect vs SpriteVertexShader
 call :CompileShader%1 SpriteEffect ps SpritePixelShader
 
